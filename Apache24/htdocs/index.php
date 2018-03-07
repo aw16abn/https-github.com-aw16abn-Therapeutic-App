@@ -1,57 +1,41 @@
-<?php $title = "Home"; 
-        $content = ' <p> 
-        This website has been created for a family run online modern art gallery.
-        There are three models they need:
-        
-        </p>;
-        
-        <img src="Images/web portal.jpg" class="imgLeft" />
-        <h1>1. Web portal</h1>
-        <p>
-            -official website of family-run modern art gallery
-            - site to run business 
-            -market products and services
-                -public access to on-line showroom
-                -look for available items
-                -display details of items
-                -contact sales team for appointment
-                    -EXTRA VALUE - customers to register their details and interested  
-                    -save searches
-            -Staff login to access secure areas such as IMS and CMS.
-        </p>
-        
-        <img src="Images/IMS.jpg" class="imgLeft" />
-        <h1>2. Information management system (IMS)</h1>
-        <p>
-            -Database driven
-            -Manage details of business
-                -paintings and scuptures for sale
-            -only available to members of staff.
-         
-        
-        </p>
-        
-        <img src="Images/CMS.png" class="imgLeft" />
-        <h1>3. Content Management System (CMS)</h1>
-        <p>
-            - only available to authorised members of staff.
-            -support easy management of back end online gallery
-            -e.g. photos, location, typeology, price etc. 
-            -publish and advertise on the pages of the online show-room 
-            any relevant news like latest entries and special offers etc. 
-        </p>
-        
+<?php
+/**
+ * Requests collector.
+ *
+ *  This file collects requests if:
+ *	- no mod_rewrite is available or .htaccess files are not supported
+ *  - requires App.baseUrl to be uncommented in app/Config/core.php
+ *	- app/webroot is not set as a document root.
+ *
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org CakePHP(tm) Project
+ * @since         CakePHP(tm) v 0.2.9
+ * @license       https://opensource.org/licenses/mit-license.php MIT License
+ */
 
-        ';
+/**
+ *  Get CakePHP's root directory
+ */
+define('APP_DIR', 'app');
+define('DS', DIRECTORY_SEPARATOR);
+define('ROOT', dirname(__FILE__));
+define('WEBROOT_DIR', 'webroot');
+define('WWW_ROOT', ROOT . DS . APP_DIR . DS . WEBROOT_DIR . DS);
 
-        include 'Template.php';
-        
-        ?>
-        
-        
-       
-        
-        
-        
-        
+/**
+ * This only needs to be changed if the "cake" directory is located
+ * outside of the distributed structure.
+ * Full path to the directory containing "cake". Do not add trailing directory separator
+ */
+if (!defined('CAKE_CORE_INCLUDE_PATH')) {
+	define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+}
 
+require APP_DIR . DS . WEBROOT_DIR . DS . 'index.php';
