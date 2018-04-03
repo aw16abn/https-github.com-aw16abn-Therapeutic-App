@@ -23,6 +23,7 @@ if (!defined('DS')) {
 	define('DS', DIRECTORY_SEPARATOR);
 }
 
+
 /**
  * These defines should only be edited if you have CakePHP installed in
  * a directory layout other than the way it is distributed.
