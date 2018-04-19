@@ -1,7 +1,9 @@
 <?php
-    namespace app\Controller;
-    use app\Controller\AppController;
-    use Cake\Routing\Router;
+
+ 
+  
+ App::uses('AppController', 'Controller');
+    
 
     
     class PostsController extends AppController

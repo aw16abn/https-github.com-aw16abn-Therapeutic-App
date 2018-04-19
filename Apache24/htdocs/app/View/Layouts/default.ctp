@@ -14,7 +14,7 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'Modern Art Gallery');
+$cakeDescription = __d('cake_dev', 'Home');
 
 ?>
 <!DOCTYPE html>
@@ -40,6 +40,20 @@ $cakeDescription = __d('cake_dev', 'Modern Art Gallery');
 		<div id="header">
 			
 		</div>
+            
+              <div id ="navigation">
+                <ul id="nav">
+                    <li><a href="index.php" style="color: white;">Home</a></li>
+                     <li><a href="app/view/pages/gallery.ctp" style="color: white;">Gallery</a></li>
+                      <li><a href="app/view/pages/upload.ctp" style="color: white;">Upload</a></li>         
+                      <li><?php $this->html->link('Upload', array ('controller' => 'pages', 'action' => 'display', 'upload'))?></li>
+                      <li><a href="#" style="color: white;">Login</a></li>
+                      <li><a href="#" style="color: white;">Content</a></li>
+                      <li><a href="#" style="color: white;">Information</a></li>
+                </ul>
+                
+            </div>
+             
 		<div id="content">
 
 			<?php echo $this->Flash->render(); ?>
