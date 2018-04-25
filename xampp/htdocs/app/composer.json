@@ -32,6 +32,10 @@
 		"lib/Cake/Console/cake"
 	],
 	"config": {
-		"vendor-dir": "Vendor/"
+		"vendor-dir": "Vendor/",
+        "secure-http":false,
+         "disable-tls": true
 	}
+        
+      
 }

@@ -65,26 +65,15 @@ class ItemsController extends AppController {
     
     public function add()
     {
+        
+        
         if ($this->request->is('post')) 
         {
-            //controller to handle file upload.
-            if(!empty($this->request->data['item_image']['name']))
-            {
-                $fileName= $this->request->data['item_image']['name'];
-                $uploadpath='img/item_img/';
-                $uploadFile= $uploadpath.$fileName;
-                if(move_uploaded_file($this->request->data['item_image'],$uploadFile))
-                {
-                    $this->request->data['item_image']=$fileName;
-              //  }
-            }
-            }
-   
-            
-            $this->Item->create();
+  
+           $this->Item->create();
            if ( $this->Item->save($this->request->data))
            {
-               $this->redirect('index');
+              $this->redirect('index');
            }
            else
            {

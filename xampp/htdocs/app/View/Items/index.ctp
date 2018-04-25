@@ -1,4 +1,6 @@
 <h1>List of <?php echo $count?> catalog Items</h1>
+
+ 
 <?php echo $this->Html->link('Add item', array('Controller' => 'items', 'action' =>'add')); ?>
 <table>
     <tr>
@@ -10,6 +12,11 @@
         
        
     </tr>
+    
+    
+        
+
+
     
     <?php foreach ($items as $item): ?>
     
@@ -32,11 +39,23 @@
         </td>
         
         <td>
+          <!--<?php echo $this->Html->link('../files/example/image/' . $entity->photo_dir . '/' . $entity->photo); ?> -->
             
-             <?php echo $this->Html->image($items->item_image);?>
+            <?php
+$exampleData = [
+'Example' => [
+'image' => 'imageFile.jpg',
+'dir' => '7'
+]
+];
+echo $this->Html->Image('../files/item/photo/' . $item['Item']['photo_dir'] . '/' . $item['Item']['photo']);
+?>
+
         </td>
          
     </tr>
+   
+
     
     <?php endforeach; ?>
     <?php unset($item); ?>
