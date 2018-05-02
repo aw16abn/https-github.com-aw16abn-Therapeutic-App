@@ -4,7 +4,7 @@
 <?php echo $this->Html->link('Add item', array('Controller' => 'items', 'action' =>'add')); ?>
 <table>
     <tr>
-        <th>id</th>
+        
         <th>Title</th>
         <th>Creator</th>
         <th>Action</th>

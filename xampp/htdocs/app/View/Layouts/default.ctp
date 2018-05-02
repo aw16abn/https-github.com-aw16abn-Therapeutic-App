@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +20,12 @@
             <div id="navigation">         
             <ul id="nav">
                 <i class="icon-home"></i>
-                <li><a href="/" style="color: black;">Home</a></li>
-                <li><a href="" style="color: black;">Gallery</a></li>  
+                <li><a href="/news" style="color: black;">Home</a></li> 
+                <li><a href="/items" style="color: black;">Gallery</a></li>
             </ul>
                 <ul id="nav-right">
                     <i class="icon-home"></i>
                  <li><a href="/users/add" style="color: black;">Register</a></li>
-                <li><a href="/items" style="color: black;">Items</a></li>
                 <li><a href="/categories" style="color: black;">Categories</a></li>  
                 <li><a href="#" style="color: black;">Information</a></li>
                 <?php if (AuthComponent::user()) : ?>
